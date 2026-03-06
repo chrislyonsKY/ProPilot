@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGIS defaultAssembly="ProPilot.dll"
+        defaultNamespace="ProPilot"
+        xmlns="http://schemas.esri.com/DADF/Registry"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+
+  <AddInInfo id="{178edf09-ce50-4ef1-b509-650166a551e2}" version="1.0" desktopVersion="3.6.59527" product="ArcGISPro">
+    <Name>ProPilot</Name>   
+    <Description>Natural language command interface for ArcGIS Pro</Description>
+    <Image>Images\AddInDesktop32.png</Image>
+    <Author>Chris Lyons</Author>
+    <Company>Kentucky Energy &amp; Environment Cabinet</Company>
+    <Date>3/6/2026 6:53:40 AM</Date>
+    <Subject>Framework, Map Exploration, Map Authoring, Editing, Geoprocessing</Subject>
+  </AddInInfo>
+
+  <modules>
+    <insertModule id="ProPilot_Module" className="ProPilotModule" autoLoad="false" caption="ProPilot">
+      <tabs>
+        <tab id="ProPilot_Tab" caption="ProPilot" keytip="PP">
+          <group refID="ProPilot_Group"/>
+        </tab>
+      </tabs>
+
+      <groups>
+        <group id="ProPilot_Group" caption="Commands" appearsOnAddInTab="true">
+          <button refID="ProPilot_OpenCommandWindow"/>
+        </group>
+      </groups>
+
+      <controls>
+        <button id="ProPilot_OpenCommandWindow" caption="ProPilot"
+                className="ProPilot.UI.OpenCommandWindowButton"
+                largeImage="Images\ProPilot32.png"
+                smallImage="Images\ProPilot16.png"
+				darkLargeImage="DarkImages\ProPilot32.png"
+				darkSmallImage="DarkImages\ProPilot16.png"
+                keytip="P">
+          <tooltip heading="ProPilot">
+            Natural language command interface.
+            <disabledText>Open a map to use ProPilot.</disabledText>
+          </tooltip>
+        </button>
+      </controls> 
+      
+    </insertModule>
+  </modules>
+</ArcGIS>
